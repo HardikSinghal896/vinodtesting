@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Set the character set and viewport for the document -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Set the title of the document -->
+    <title>Profit and Loss</title>
+</head>
+<body>
+    <!-- Main container for the quiz -->
+    <div class="main-container1">
+        <!-- Container for displaying the topic -->
+        <div>Profit and Loss </div>
+        
+        <!-- Timer display -->
+        <div style="position: absolute" id="timer"></div>
+        
+        <!-- Score display -->
+        <div style="float: right;" id="score">Score</div>
+        
+        <!-- Container for displaying the quiz question -->
+        <div class="question-container" style="border-radius: 1rem; padding: 4rem;"></div>
+
+        <!-- Container for buttons -->
+        <div class="button-container">
+            <!-- Button rows -->
+            <div class="button-row">
+                <!-- Answer buttons -->
+                <button class="btn1 button"></button><button class="btn2 button"></button>
+            </div>
+            <div class="button-row">
+                <!-- Answer buttons -->
+                <button class="btn3 button"></button><button class="btn4 button"></button>
+            </div>
+            <div class="button-row">
+                <!-- Next Question button -->
+                <button class="btn5 button">Next Question</button>
+            </div>
+            
+            <!-- Link to external stylesheet -->
+            <link rel="stylesheet" href="../Style.css">
+        </div>
+    </div>
+
+    <!-- Results container -->
+    <div class="main-container">
+        <!-- Result heading -->
+        <div>
+            <h1 id="yourresult">Result</h1>
+        </div>
+        
+        <!-- Correct answer display -->
+        <div>
+            <h3 id="correctAnswers">Correct answer</h3>
+        </div>
+        
+        <!-- Wrong attempts display -->
+        <div>
+            <h3 id="wrongAttemps">Wrong attempts</h3>
+        </div>
+        
+        <!-- Time taken to complete the quiz display -->
+        <div>
+            <h3 id="timeTaken">Time taken to complete the quiz</h3>
+        </div>
+        
+        <!-- Total Attempted Question display -->
+        <div>
+            <h3 id="totalAttempted">Total Attempted Question</h3>
+        </div>
+    </div>
+</body>
+<!-- JavaScript file for Profit and Loss-related functionality -->
+<script src="./profit&loss.js"></script>
+</html>

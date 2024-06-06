@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Set the character set and viewport for the document -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Set the title of the document -->
+    <title>QUIZ APP</title>
+    
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="App.css">
+</head>
+<body>
+    <!-- Main container for the quiz app -->
+    <div class="main-container">
+        <!-- Logo image -->
+        <div> <img src="Quiz.jpeg" alt="lobo" height="100rem" width="100rem"></div>
+        
+        <!-- Greeting and welcome messages -->
+        <h1 class="text-style"> Hello!</h1>
+        <h1 class="text-style">Welcome to the Quiz App </h1>
+        
+        <!-- Input box for entering the name -->
+        <input type="text" placeholder="Enter your name " width="50%"  id="inputbox">
+        
+        <!-- Button to submit the name -->
+        <button onclick="onenter()">Enter</button>
+        
+        <!-- Information about the time limit for each question -->
+        <p>you will have 10 seconds to answer each question</p>
+        
+        <!-- Horizontal line for visual separation -->
+        <hr>
+        
+        <!-- Heading for selecting the quiz category -->
+        <h1 class="text-style">Select Category</h1>
+        
+        <!-- Container for category buttons -->
+        <div class="button-cont">
+            <!-- Button rows with links to different quiz categories -->
+            <div class="button-row">
+                <a href="http://127.0.0.1:5501/files/profit&loss.html">
+                    <button class="button" id="dis1">Profit and Loss</button>
+                </a>
+                <a href="http://127.0.0.1:5501/files/PipesandCisterns.html">
+                    <button class="button" id="dis2">Pipes and Cisterns</button>
+                </a>
+            </div>
+            <div class="button-row">
+                <a href="http://127.0.0.1:5501/files/probabilty.html">
+                    <button class="button" id="dis3">Probability</button>
+                </a>
+                <a href="http://127.0.0.1:5501/files/age.html">
+                    <button class="button" id="dis4">Problems on Age</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    // Get the input element by ID
+    const inputvalue = document.getElementById("inputbox");
+    
+    // Disable category buttons initially
+    document.getElementById('dis1').disabled= true;
+    document.getElementById('dis2').disabled= true;
+    document.getElementById('dis3').disabled= true;
+    document.getElementById('dis4').disabled= true;
+    
+    // Function to be called on entering the name
+    function onenter(){
+        // Store the name in local storage
+        localStorage.setItem("name",inputvalue.value);
+        console.log(inputvalue.value);
+        
+        // Enable category buttons after entering the name
+        document.getElementById('dis1').disabled= false;
+        document.getElementById('dis2').disabled= false;
+        document.getElementById('dis3').disabled= false;
+        document.getElementById('dis4').disabled= false;
+    }
+</script>
+</html>
